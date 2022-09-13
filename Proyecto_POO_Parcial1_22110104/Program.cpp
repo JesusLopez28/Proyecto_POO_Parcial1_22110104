@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void Program::run() { //Ultimo cambio
+void Program::run() { 
 	//Square
 	Square* s = new Square('*', 10, 10, 10, 0);
 	s->draw();
