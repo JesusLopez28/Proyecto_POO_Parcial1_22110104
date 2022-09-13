@@ -19,4 +19,4 @@ void Program::run() {
 	Circle* c = new Circle('*', 10, 10, 10);
 	c->draw();
 	delete c;
-} //Quiero actualizar ahora
+}
