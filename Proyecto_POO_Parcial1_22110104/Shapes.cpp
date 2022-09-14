@@ -1,6 +1,10 @@
+/*López Rosales Jesús Alejandro
+22110104	2°0		POO*/
 #include "Shapes.h"
 #include <iostream>
 #include<iomanip>
+#include<conio.h>
+#include<Windows.h>
 
 using namespace std;
 
@@ -84,6 +88,7 @@ void Triangle::draw() {
 		cout << endl;
 	}
 }
+
 
 //Constructores para Circle
 int Circle::getRadius() {

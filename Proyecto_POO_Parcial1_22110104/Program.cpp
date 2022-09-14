@@ -1,4 +1,8 @@
+/*López Rosales Jesús Alejandro
+22110104	2°0		POO*/
 #include <iostream>
+#include<conio.h>
+#include<Windows.h>
 #include "Program.h"
 #include "Shapes.h"
 
@@ -68,7 +72,7 @@ void Program::menu() {
 				system("cls");
 			} while (height <= 0);
 			//Triangle
-			Triangle* t = new Triangle(q, x, x, height);
+			Triangle* t = new Triangle(q, x, y, height);
 			t->draw();
 			delete t;
 		}
@@ -84,7 +88,7 @@ void Program::menu() {
 				system("cls");
 			} while (radius <= 0);
 			//Circle
-			Circle* c = new Circle(q, x, x, radius);
+			Circle* c = new Circle(q, x, y, radius);
 			c->draw();
 			delete c;
 		}
