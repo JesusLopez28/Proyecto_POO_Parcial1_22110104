@@ -4,4 +4,5 @@
 class Program {
 public:
     void run();
+    void menu();
 };
