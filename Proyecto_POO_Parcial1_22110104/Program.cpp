@@ -67,7 +67,7 @@ void Program::menu() {
 				cin >> x;
 				cout << "Ingrese la coordenada en y: ";
 				cin >> y;
-				cout << "Ingrese la longitud del lado del cuadrado: ";
+				cout << "Ingrese la longitud del la altura del triangulo: ";
 				cin >> height;
 				system("cls");
 			} while (height <= 0);
@@ -83,7 +83,7 @@ void Program::menu() {
 				cin >> x;
 				cout << "Ingrese la coordenada en y: ";
 				cin >> y;
-				cout << "Ingrese la longitud del lado del cuadrado: ";
+				cout << "Ingrese la longitud del radio del circulo: ";
 				cin >> radius;
 				system("cls");
 			} while (radius <= 0);

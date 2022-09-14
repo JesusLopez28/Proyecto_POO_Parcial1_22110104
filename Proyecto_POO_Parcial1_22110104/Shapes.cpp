@@ -39,6 +39,16 @@ void Square::draw() {
 	f = getFill();
 	x = getX();
 	y = getY();
+	char opcion = _getch();
+
+	while (opcion != 'q') {
+		system("cls");
+		cout << "Opciones para mover la figura:" << endl;
+		cout << "w.- Arriba\t";
+		cout << "s.- Abajo\t";
+		cout << "a.- Izquierda\t";
+		cout << "d.- Derecha\t";
+		cout << "q.- Salir\t";
 
 	for (i; i < s; i++) {
 		for (j = 0; j < s; j++) {
@@ -64,6 +74,15 @@ void Square::draw() {
 		}
 		cout << "   " << endl;
 	}
+
+	opcion = _getch();
+	switch (opcion) {
+	case 'w': y--; break;
+	case 's': y++; break;
+	case 'a': x--; break;
+	case 'd': x++; break;
+	}
+	}
 }
 
 //Constructores para Triangle
@@ -79,13 +98,32 @@ void Triangle::draw() {
 	h = getHeight();
 	x = getX();
 	y = getY();
+	char opcion = _getch();
 
-	for (i = 1; i < y; i++) cout << " " << endl;
-	for (i = 1; i <= h; i++) {
-		cout << setw(x);
-		for (j = 1; j <= h - i; j++) cout << " ";
-		for (j = 1; j <= 2 * i - 1; j++) cout << cha;
-		cout << endl;
+	while (opcion != 'q'){
+		system("cls");
+		cout << "Opciones para mover la figura:" << endl;
+		cout << "w.- Arriba\t";
+		cout << "s.- Abajo\t";
+		cout << "a.- Izquierda\t";
+		cout << "d.- Derecha\t";
+		cout << "q.- Salir\t";
+
+		for (i = 1; i < y; i++) cout << " " << endl;
+		for (i = 1; i <= h; i++) {
+			cout << setw(x);
+			for (j = 1; j <= h - i; j++) cout << " ";
+			for (j = 1; j <= 2 * i - 1; j++) cout << cha;
+			cout << endl;
+		}
+
+		opcion = _getch();
+		switch (opcion) {
+		case 'w': y--; break;
+		case 's': y++; break;
+		case 'a': x--; break;
+		case 'd': x++; break;
+		}
 	}
 }
 
@@ -103,6 +141,16 @@ void Circle::draw() {
 	r = getRadius();
 	x = getX();
 	y = getY();
+	char opcion = _getch();
+
+	while (opcion != 'q') {
+		system("cls");
+		cout << "Opciones para mover la figura:" << endl;
+		cout << "w.- Arriba\t";
+		cout << "s.- Abajo\t";
+		cout << "a.- Izquierda\t";
+		cout << "d.- Derecha\t";
+		cout << "q.- Salir\t";
 
 	for (i = 1; i < y; i++) cout << " " << endl;
 	for (j = 0; j <= r * 2; j++) {
@@ -112,5 +160,14 @@ void Circle::draw() {
 			else cout << " ";
 		}
 		cout << endl;
+	}
+
+	opcion = _getch();
+	switch (opcion) {
+	case 'w': y--; break;
+	case 's': y++; break;
+	case 'a': x--; break;
+	case 'd': x++; break;
+	}
 	}
 }
