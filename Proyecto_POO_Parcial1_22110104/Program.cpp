@@ -38,7 +38,7 @@ void Program::menu() {
 		cout << "Igrese el caracter con el que desea dibujar la figura: ";
 		cin >> q;
 		system("cls");
-
+		Shape* s = nullptr;
 		if (*pointer_shape == 1) {
 			do {
 				cout << "Desea que su figura este relleno? " << endl;
@@ -56,9 +56,8 @@ void Program::menu() {
 				system("cls");
 			} while (side <= 0);
 			//Square
-			Square* s = new Square(q, x, y, side, fill);
-			s->draw();
-			delete s;
+			s = new Square(q, x, y, side, fill);
+			
 		}
 		
 		if (*pointer_shape == 2) {
@@ -72,9 +71,7 @@ void Program::menu() {
 				system("cls");
 			} while (height <= 0);
 			//Triangle
-			Triangle* t = new Triangle(q, x, y, height);
-			t->draw();
-			delete t;
+			s = new Triangle(q, x, y, height);
 		}
 		
 		if (*pointer_shape == 3) {
@@ -88,10 +85,9 @@ void Program::menu() {
 				system("cls");
 			} while (radius <= 0);
 			//Circle
-			Circle* c = new Circle(q, x, y, radius);
-			c->draw();
-			delete c;
+			s = new Circle(q, x, y, radius);
 		}
+		s->draw();
 
 			cout << "\n\nDesea dibujar otra figura? " << endl;
 			cout << "0.-No" << endl;
@@ -100,6 +96,7 @@ void Program::menu() {
 			cin >> opc;
 			system("cls");
 			delete pointer_shape;
+			delete s;
 	}
 
 	cout << "\n-----------------\nFin del programa.\nGRACIAS\n-----------------\n\n" << endl;
