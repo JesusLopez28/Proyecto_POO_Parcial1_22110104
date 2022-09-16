@@ -53,7 +53,7 @@ int Square::getFill() {
 }
 
 void Square::draw() {
-	char cha, matrix[100][100];
+	char cha;
 	int x, y, s, f;
 	int i = 0, j = 0;
 	cha = getCharacter();
@@ -62,29 +62,17 @@ void Square::draw() {
 	x = getX();
 	y = getY();
 
-	for (i; i < s; i++) {
-		for (j = 0; j < s; j++) {
-			if (f == 0) {
-				if (i == 0 || j == 0 || i == s - 1 || j == s - 1) {
-					matrix[i][j] = cha;
-				}
-				else {
-					matrix[i][j] = ' ';
-				}
-			}
-			else {
-				matrix[i][j] = cha;
-			}
-		}
-	}
-
 	for (i = 1; i < y; i++) cout << " " << endl;
 	for (i = 0; i < s; i++) {
 		cout << setw(x);
 		for (j = 0; j < s; j++) {
-			cout << matrix[i][j];
+			if (f == 0) {
+				if (i == 0 || j == 0 || i == s - 1 || j == s - 1) {
+					cout << cha;
+				}else cout << ' ';
+			}else cout << cha;
 		}
-		cout << "   " << endl;
+		cout << endl;
 	}
 }
 
