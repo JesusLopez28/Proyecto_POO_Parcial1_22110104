@@ -87,7 +87,8 @@ void Program::menu() {
 			//Circle
 			s = new Circle(q, x, y, radius);
 		}
-		s->draw();
+			
+			s->move();
 
 			cout << "\n\nDesea dibujar otra figura? " << endl;
 			cout << "0.-No" << endl;

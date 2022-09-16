@@ -19,6 +19,7 @@ public:
     int getY();
     char getCharacter();
     virtual void draw() = 0;
+    void move();
 };
 
 class Square : public Shape {
